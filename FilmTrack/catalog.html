@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — FilmTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">filmtrack<span>.</span></a>
+    <button class="mobile-menu-button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link active" href="catalog.html">Каталог</a>
+      <a class="nav-link" href="podbor.html">Подборка</a>
+      <a class="nav-link" href="my-list.html">Мои списки</a>
+    </nav>
+    <div class="header-account"><span class="account-name" data-account-name>Гость</span><button class="button button-outline button-small" data-auth-open>Войти</button></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">ИССЛЕДУЙ И ВЫБИРАЙ</p>
+      <h1>Каталог<span class="accent-dot">.</span></h1>
+      <p>Фильмы и сериалы, которые можно добавить в собственную кинотеку.</p>
+    </section>
+
+    <section class="catalog-controls" aria-label="Поиск и фильтры">
+      <label class="search-field"><span>⌕</span><input id="catalog-search" type="search" placeholder="Найти фильм или сериал..." autocomplete="off"></label>
+      <select id="type-filter" aria-label="Тип"><option value="all">Все типы</option><option value="Фильм">Фильмы</option><option value="Сериал">Сериалы</option></select>
+      <select id="genre-filter" aria-label="Жанр"><option value="all">Все жанры</option><option value="Драма">Драма</option><option value="Фантастика">Фантастика</option><option value="Триллер">Триллер</option><option value="Комедия">Комедия</option><option value="Приключения">Приключения</option></select>
+      <select id="sort-filter" aria-label="Сортировка"><option value="default">Сначала рекомендуемые</option><option value="title">По названию</option><option value="year-desc">Сначала новые</option><option value="year-asc">Сначала старые</option></select>
+    </section>
+
+    <div class="catalog-status"><span id="catalog-count">Загрузка каталога...</span><button class="button-text" id="reset-filters" type="button">Сбросить фильтры</button></div>
+    <section class="movie-grid" id="catalog-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer"><a class="logo" href="index.html">filmtrack<span>.</span></a><span>Твоя личная кинотека</span><span>© 2026 FilmTrack</span></footer>
+
+  <dialog class="auth-dialog" data-auth-dialog><form class="auth-form" data-auth-form>
+    <button class="dialog-close" type="button" data-auth-close>×</button><p class="eyebrow">ТВОЙ АККАУНТ</p><h2 data-auth-title>Войти</h2>
+    <label>Имя пользователя<input name="username" required minlength="3"></label><label>Пароль<input name="password" type="password" required minlength="4"></label>
+    <p class="form-note">Демонстрационный режим: не используй настоящий пароль.</p><p class="form-error" data-auth-error></p>
+    <button class="button button-dark button-full" type="submit">Продолжить</button><button class="button-text auth-switch" type="button" data-auth-switch>Нет аккаунта? Зарегистрироваться</button>
+  </form></dialog>
+  <dialog class="details-dialog" id="movie-details"><div class="details-content" id="details-content"></div><button class="dialog-close" type="button" data-details-close>×</button></dialog>
+</body>
+</html>

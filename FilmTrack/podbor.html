@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подборка — FilmTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">filmtrack<span>.</span></a>
+    <button class="mobile-menu-button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a class="nav-link" href="index.html">Главная</a><a class="nav-link" href="catalog.html">Каталог</a>
+      <a class="nav-link active" href="podbor.html">Подборка</a><a class="nav-link" href="my-list.html">Мои списки</a>
+    </nav>
+    <div class="header-account"><span class="account-name" data-account-name>Гость</span><button class="button button-outline button-small" data-auth-open>Войти</button></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">НЕ ЗНАЕШЬ, ЧТО ПОСМОТРЕТЬ?</p>
+      <h1>Подборка<span class="accent-dot">.</span></h1>
+      <p>Опиши настроение — найди историю для своего вечера.</p>
+    </section>
+
+    <section class="mood-layout">
+      <div class="mood-panel">
+        <p class="eyebrow">ШАГ 01 / ВЫБЕРИ НАСТРОЕНИЕ</p>
+        <h2>Что тебе сейчас ближе?</h2>
+        <div class="mood-options" id="mood-options">
+          <button class="mood-option selected" type="button" data-mood="cozy"><span>☁</span><strong>Спокойное</strong><small>Уютное, тёплое, осеннее</small></button>
+          <button class="mood-option" type="button" data-mood="exciting"><span>✦</span><strong>Захватывающее</strong><small>Напряжение и неожиданные повороты</small></button>
+          <button class="mood-option" type="button" data-mood="inspiring"><span>↗</span><strong>Вдохновляющее</strong><small>Мечты, цели и новые идеи</small></button>
+          <button class="mood-option" type="button" data-mood="mysterious"><span>◐</span><strong>Загадочное</strong><small>Атмосфера и тайны</small></button>
+        </div>
+        <label class="mood-prompt-label" for="mood-prompt">ШАГ 02 / ДОБАВЬ ДЕТАЛИ</label>
+        <textarea id="mood-prompt" placeholder="Например: хочу что-то спокойное, осеннее, с красивой атмосферой и без слишком тяжёлого сюжета..."></textarea>
+        <button class="button button-dark" id="make-recommendation" type="button">Найти фильм <span>↗</span></button>
+        <p class="form-note">Пока это демонстрационный алгоритм по настроению и ключевым словам. Подключение настоящего ИИ/API — отдельный следующий этап.</p>
+      </div>
+      <aside class="mood-aside">
+        <div class="aside-mark">F.</div>
+        <p>Иногда не нужно знать название. Достаточно понять, какое чувство хочется получить от истории.</p>
+        <span>FILMTRACK MOOD FINDER</span>
+      </aside>
+    </section>
+    <section class="recommendation-section" id="recommendation-section" hidden>
+      <div class="section-heading"><div><p class="eyebrow">ТВОИ ВАРИАНТЫ</p><h2>Может понравиться</h2></div><span id="recommendation-caption" class="muted"></span></div>
+      <div class="movie-grid" id="recommendation-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="logo" href="index.html">filmtrack<span>.</span></a><span>Твоя личная кинотека</span><span>© 2026 FilmTrack</span></footer>
+
+  <dialog class="auth-dialog" data-auth-dialog><form class="auth-form" data-auth-form>
+    <button class="dialog-close" type="button" data-auth-close>×</button><p class="eyebrow">ТВОЙ АККАУНТ</p><h2 data-auth-title>Войти</h2>
+    <label>Имя пользователя<input name="username" required minlength="3"></label><label>Пароль<input name="password" type="password" required minlength="4"></label>
+    <p class="form-note">Демонстрационный режим: не используй настоящий пароль.</p><p class="form-error" data-auth-error></p>
+    <button class="button button-dark button-full" type="submit">Продолжить</button><button class="button-text auth-switch" type="button" data-auth-switch>Нет аккаунта? Зарегистрироваться</button>
+  </form></dialog>
+</body>
+</html>
