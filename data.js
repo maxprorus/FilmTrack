@@ -1,0 +1,147 @@
+// Демонстрационная база фильмов. Позже её можно заменить данными из TMDB API.
+window.FILMTRACK_MOVIES = [
+  {
+    id: "interstellar",
+    title: "Интерстеллар",
+    originalTitle: "Interstellar",
+    year: 2014,
+    type: "Фильм",
+    genre: "Фантастика",
+    mood: ["exciting", "mysterious"],
+    description: "Группа исследователей отправляется за пределы нашей галактики, чтобы найти человечеству новый дом.",
+    posterClass: "poster-space",
+    posterLabel: "INTERSTELLAR"
+  },
+  {
+    id: "little-women",
+    title: "Маленькие женщины",
+    originalTitle: "Little Women",
+    year: 2019,
+    type: "Фильм",
+    genre: "Драма",
+    mood: ["cozy", "inspiring"],
+    description: "История четырёх сестёр, их взросления, мечтаний и попыток найти собственный путь.",
+    posterClass: "poster-women",
+    posterLabel: "LITTLE WOMEN"
+  },
+  {
+    id: "inception",
+    title: "Начало",
+    originalTitle: "Inception",
+    year: 2010,
+    type: "Фильм",
+    genre: "Триллер",
+    mood: ["exciting", "mysterious"],
+    description: "Профессионал проникает в чужие сны и получает почти невыполнимое задание.",
+    posterClass: "poster-inception",
+    posterLabel: "INCEPTION"
+  },
+  {
+    id: "elemental",
+    title: "Элементарно",
+    originalTitle: "Elemental",
+    year: 2023,
+    type: "Фильм",
+    genre: "Комедия",
+    mood: ["cozy"],
+    description: "В городе, где живут стихии, знакомство двух непохожих героев меняет их взгляды.",
+    posterClass: "poster-elemental",
+    posterLabel: "ELEMENTAL"
+  },
+  {
+    id: "severance",
+    title: "Разделение",
+    originalTitle: "Severance",
+    year: 2022,
+    type: "Сериал",
+    genre: "Триллер",
+    mood: ["mysterious", "exciting"],
+    description: "Сотрудники компании проходят процедуру, разделяющую рабочие воспоминания и личную жизнь.",
+    posterClass: "poster-severance",
+    posterLabel: "SEVERANCE"
+  },
+  {
+    id: "la-la-land",
+    title: "Ла-Ла Ленд",
+    originalTitle: "La La Land",
+    year: 2016,
+    type: "Фильм",
+    genre: "Драма",
+    mood: ["inspiring", "cozy"],
+    description: "Музыкант и актриса пытаются сохранить свои мечты и отношения в большом городе.",
+    posterClass: "poster-lalaland",
+    posterLabel: "LA LA LAND"
+  },
+  {
+    id: "stranger-things",
+    title: "Очень странные дела",
+    originalTitle: "Stranger Things",
+    year: 2016,
+    type: "Сериал",
+    genre: "Фантастика",
+    mood: ["mysterious", "exciting"],
+    description: "Исчезновение мальчика открывает дверь к тайнам небольшого города.",
+    posterClass: "poster-stranger",
+    posterLabel: "STRANGER THINGS"
+  },
+  {
+    id: "knives-out",
+    title: "Достать ножи",
+    originalTitle: "Knives Out",
+    year: 2019,
+    type: "Фильм",
+    genre: "Комедия",
+    mood: ["exciting"],
+    description: "Частный детектив расследует загадочную смерть главы необычной семьи.",
+    posterClass: "poster-knives",
+    posterLabel: "KNIVES OUT"
+  },
+  {
+    id: "the-grand-budapest",
+    title: "Отель «Гранд Будапешт»",
+    originalTitle: "The Grand Budapest Hotel",
+    year: 2014,
+    type: "Фильм",
+    genre: "Комедия",
+    mood: ["cozy", "inspiring"],
+    description: "Приключения консьержа знаменитого отеля и его молодого помощника.",
+    posterClass: "poster-budapest",
+    posterLabel: "GRAND BUDAPEST"
+  },
+  {
+    id: "dark",
+    title: "Тьма",
+    originalTitle: "Dark",
+    year: 2017,
+    type: "Сериал",
+    genre: "Фантастика",
+    mood: ["mysterious"],
+    description: "Исчезновение ребёнка связывает четыре семьи и раскрывает тайны нескольких поколений.",
+    posterClass: "poster-dark",
+    posterLabel: "DARK"
+  },
+  {
+    id: "the-martian",
+    title: "Марсианин",
+    originalTitle: "The Martian",
+    year: 2015,
+    type: "Фильм",
+    genre: "Приключения",
+    mood: ["inspiring", "exciting"],
+    description: "Астронавт пытается выжить на Марсе, используя знания, находчивость и чувство юмора.",
+    posterClass: "poster-martian",
+    posterLabel: "THE MARTIAN"
+  },
+  {
+    id: "paddington",
+    title: "Приключения Паддингтона",
+    originalTitle: "Paddington",
+    year: 2014,
+    type: "Фильм",
+    genre: "Приключения",
+    mood: ["cozy"],
+    description: "Добрый медвежонок приезжает в Лондон и находит новую семью.",
+    posterClass: "poster-paddington",
+    posterLabel: "PADDINGTON"
+  }
+];

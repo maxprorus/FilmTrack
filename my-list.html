@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои списки — FilmTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">filmtrack<span>.</span></a>
+    <button class="mobile-menu-button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a class="nav-link" href="index.html">Главная</a><a class="nav-link" href="catalog.html">Каталог</a>
+      <a class="nav-link" href="podbor.html">Подборка</a><a class="nav-link active" href="my-list.html">Мои списки</a>
+    </nav>
+    <div class="header-account"><span class="account-name" data-account-name>Гость</span><button class="button button-outline button-small" data-auth-open>Войти</button></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">ТВОЯ ЛИЧНАЯ КОЛЛЕКЦИЯ</p>
+      <h1>Мои списки<span class="accent-dot">.</span></h1>
+      <p>Сохраняй интересное и отмечай свой прогресс.</p>
+    </section>
+    <section class="list-summary" aria-label="Статистика списков">
+      <div><span class="summary-number" id="count-planned">0</span><span>Хочу посмотреть</span></div>
+      <div><span class="summary-number" id="count-watching">0</span><span>Смотрю</span></div>
+      <div><span class="summary-number" id="count-watched">0</span><span>Просмотрено</span></div>
+    </section>
+    <div class="list-tabs" role="tablist">
+      <button class="list-tab active" type="button" data-list-status="Хочу посмотреть">Хочу посмотреть</button>
+      <button class="list-tab" type="button" data-list-status="Смотрю">Смотрю</button>
+      <button class="list-tab" type="button" data-list-status="Просмотрено">Просмотрено</button>
+    </div>
+    <section class="movie-grid" id="my-list-grid"></section>
+    <div class="empty-list" id="empty-list">
+      <span class="empty-icon">＋</span>
+      <h2>Здесь пока пусто</h2>
+      <p>Открой каталог и добавь фильмы или сериалы в этот список.</p>
+      <a class="button button-dark" href="catalog.html">Перейти в каталог ↗</a>
+    </div>
+  </main>
+
+  <footer class="site-footer"><a class="logo" href="index.html">filmtrack<span>.</span></a><span>Твоя личная кинотека</span><span>© 2026 FilmTrack</span></footer>
+
+  <dialog class="auth-dialog" data-auth-dialog><form class="auth-form" data-auth-form>
+    <button class="dialog-close" type="button" data-auth-close>×</button><p class="eyebrow">ТВОЙ АККАУНТ</p><h2 data-auth-title>Войти</h2>
+    <label>Имя пользователя<input name="username" required minlength="3"></label><label>Пароль<input name="password" type="password" required minlength="4"></label>
+    <p class="form-note">Демонстрационный режим: не используй настоящий пароль.</p><p class="form-error" data-auth-error></p>
+    <button class="button button-dark button-full" type="submit">Продолжить</button><button class="button-text auth-switch" type="button" data-auth-switch>Нет аккаунта? Зарегистрироваться</button>
+  </form></dialog>
+</body>
+</html>
